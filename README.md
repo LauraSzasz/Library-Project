@@ -6,7 +6,8 @@ It is a work-in-progress application.
 ## Technologies
 A list of technologies used within the project:
 * Spring Boot
-* Angular
+* Angular v12.0.0
+* Bootstrap v5.0.1
 * Spring Data JPA
 * MySQL
 * Flyway
