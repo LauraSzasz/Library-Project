@@ -1,0 +1,15 @@
+.navbar-light {
+  background-color: whitesmoke;
+}
+
+.navbar {
+  padding: 3px;
+}
+
+#logo {
+  margin: 3px;
+}
+
+#registerButton{
+  background-color: white;
+}

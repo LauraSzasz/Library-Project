@@ -1,0 +1,9 @@
+.container{
+  border-radius: 0.3rem;
+  margin: 1em 0;
+  padding: 16px;
+}
+
+.form-title{
+  text-align: center;
+}
