@@ -11,6 +11,7 @@ import {HomeComponent} from './home/home.component';
 import {BooksComponent} from './books/books.component';
 import {RecommendedComponent} from './recommended/recommended.component';
 import {RegisterComponent} from './register/register.component';
+import { AuthorsComponent } from './authors/authors.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {RegisterComponent} from './register/register.component';
     HomeComponent,
     BooksComponent,
     RecommendedComponent,
-    RegisterComponent
+    RegisterComponent,
+    AuthorsComponent
   ],
   imports: [
     BrowserModule,

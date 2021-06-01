@@ -4,11 +4,13 @@ import {HomeComponent} from "./home/home.component";
 import {BooksComponent} from "./books/books.component";
 import {RecommendedComponent} from "./recommended/recommended.component";
 import {RegisterComponent} from "./register/register.component";
+import {AuthorsComponent} from "./authors/authors.component";
 
 const routes: Routes = [
   {path:'home', component: HomeComponent},
   {path:'books', component: BooksComponent},
   {path:'recommended', component: RecommendedComponent},
+  {path:'authors', component: AuthorsComponent},
   {path:'register', component: RegisterComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', redirectTo: '/home', pathMatch: 'full'}

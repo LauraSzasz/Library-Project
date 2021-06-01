@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   menuItems = [
     {routerLink:'home', linkName: 'Home'},
     {routerLink:'books', linkName: 'Books'},
+    {routerLink: 'authors', linkName: 'Authors'},
     {routerLink:'recommended', linkName: 'We Recommend'},
   ];
 
