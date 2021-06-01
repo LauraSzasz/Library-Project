@@ -1,5 +1,6 @@
 package com.library.Book.Library.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -12,6 +13,7 @@ import java.util.List;
 
 @Entity
 @Table (name="authors")
+@AllArgsConstructor
 @NoArgsConstructor
 @Data
 public class Author {

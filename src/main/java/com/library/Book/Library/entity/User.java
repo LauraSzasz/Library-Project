@@ -1,4 +1,5 @@
 package com.library.Book.Library.entity;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.library.Book.Library.enums.UserRole;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,6 +27,7 @@ public class User {
     private String lastName;
 
     @Column(name = "date_of_birth")
+    @JsonFormat(pattern="yyyy-MM-dd")
     private Date dateOfBirth;
 
     private String email;
