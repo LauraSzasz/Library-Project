@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {User} from "../models/user";
-import {UserService} from "../service/user.service";
+import {User} from "../../models/user";
+import {UserService} from "../../service/user.service";
 import {Router} from "@angular/router";
 
 @Component({
@@ -21,12 +21,12 @@ export class RegisterComponent implements OnInit {
   saveUser(){
     this.userService.saveUser(this.user).subscribe( data =>{
       console.log(data);
-      this.goToBooksPage();
+      this.goToHomePage();
     }, error => console.log(error));
   }
 
-  goToBooksPage(){
-    this.router.navigate(['/books']).then(nav => {
+  goToHomePage(){
+    this.router.navigate(['/home']).then(nav => {
       console.log(nav);
     }, err => {
       console.log(err)
@@ -34,9 +34,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    let response = this.userService.saveUser(this.user);
-    response.subscribe();
-
+    let response = this.saveUser();
   }
 
 }

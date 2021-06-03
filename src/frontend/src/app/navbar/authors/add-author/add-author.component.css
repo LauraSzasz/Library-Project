@@ -1,0 +1,7 @@
+.container {
+  width: 50%;
+  border: thin solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  background-color: whitesmoke;
+}

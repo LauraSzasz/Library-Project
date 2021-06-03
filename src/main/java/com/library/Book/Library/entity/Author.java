@@ -24,22 +24,19 @@ public class Author {
     private Long id;
 
     @Column(name = "first_name")
-    @NotEmpty
     private String firstName;
 
     @Column(name = "last_name")
-    @NotEmpty
     private String lastName;
 
     @Column(name = "date_of_birth")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @NotNull
     private Date dateOfBirth;
 
     @OneToMany(mappedBy = "author")
     private List<Book> books;
 
-    public Author(@NotEmpty String firstName, @NotEmpty String lastName, @NotNull Date dateOfBirth, List<Book> books) {
+    public Author(String firstName, String lastName, Date dateOfBirth, List<Book> books) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;

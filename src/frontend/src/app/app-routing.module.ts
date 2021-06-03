@@ -1,17 +1,19 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import {HomeComponent} from "./home/home.component";
-import {BooksComponent} from "./books/books.component";
-import {RecommendedComponent} from "./recommended/recommended.component";
-import {RegisterComponent} from "./register/register.component";
-import {AuthorsComponent} from "./authors/authors.component";
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {HomeComponent} from "./navbar/home/home.component";
+import {BooksComponent} from "./navbar/books/books.component";
+import {RecommendedComponent} from "./navbar/recommended/recommended.component";
+import {RegisterComponent} from "./navbar/register/register.component";
+import {AuthorsComponent} from "./navbar/authors/authors.component";
+import {AddAuthorComponent} from "./navbar/authors/add-author/add-author.component";
 
 const routes: Routes = [
-  {path:'home', component: HomeComponent},
-  {path:'books', component: BooksComponent},
-  {path:'recommended', component: RecommendedComponent},
-  {path:'authors', component: AuthorsComponent},
-  {path:'register', component: RegisterComponent},
+  {path: 'home', component: HomeComponent},
+  {path: 'books', component: BooksComponent},
+  {path: 'recommended', component: RecommendedComponent},
+  {path: 'authors', component: AuthorsComponent},
+  {path: 'register', component: RegisterComponent},
+  {path: 'addAuthor', component: AddAuthorComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', redirectTo: '/home', pathMatch: 'full'}
 ];
@@ -20,4 +22,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

@@ -13,3 +13,8 @@
 #registerButton{
   background-color: white;
 }
+
+#registerButton:hover{
+  background-color: #10AFD1;
+  color: whitesmoke;
+}

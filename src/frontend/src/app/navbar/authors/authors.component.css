@@ -1,0 +1,13 @@
+h3 {
+  text-align: center;
+  padding: 5px;
+}
+
+.addAuthorBtn {
+  display: inline-block;
+}
+
+#btnAddAuthor {
+  margin: 5px;
+  background-color: #10AFD1;
+}

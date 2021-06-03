@@ -6,22 +6,24 @@ import {ReactiveFormsModule} from "@angular/forms";
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {HeaderComponent} from './header/header.component';
-import {HomeComponent} from './home/home.component';
-import {BooksComponent} from './books/books.component';
-import {RecommendedComponent} from './recommended/recommended.component';
-import {RegisterComponent} from './register/register.component';
-import { AuthorsComponent } from './authors/authors.component';
+import {NavbarComponent} from './navbar/navbar.component';
+import {HomeComponent} from './navbar/home/home.component';
+import {BooksComponent} from './navbar/books/books.component';
+import {RecommendedComponent} from './navbar/recommended/recommended.component';
+import {RegisterComponent} from './navbar/register/register.component';
+import {AuthorsComponent} from './navbar/authors/authors.component';
+import {AddAuthorComponent} from './navbar/authors/add-author/add-author.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
+    NavbarComponent,
     HomeComponent,
     BooksComponent,
     RecommendedComponent,
     RegisterComponent,
-    AuthorsComponent
+    AuthorsComponent,
+    AddAuthorComponent
   ],
   imports: [
     BrowserModule,
