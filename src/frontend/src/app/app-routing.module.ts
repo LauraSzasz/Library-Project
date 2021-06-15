@@ -6,6 +6,7 @@ import {RecommendedComponent} from "./navbar/recommended/recommended.component";
 import {RegisterComponent} from "./navbar/register/register.component";
 import {AuthorsComponent} from "./navbar/authors/authors.component";
 import {AddAuthorComponent} from "./navbar/authors/add-author/add-author.component";
+import {AddBookComponent} from "./navbar/books/add-book/add-book.component";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'authors', component: AuthorsComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'addAuthor', component: AddAuthorComponent},
+  {path: 'addBook', component: AddBookComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', redirectTo: '/home', pathMatch: 'full'}
 ];

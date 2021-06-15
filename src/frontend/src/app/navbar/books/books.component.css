@@ -1,0 +1,41 @@
+.addBookBtn {
+  display: inline-block;
+}
+
+#btnAddBook {
+  margin: 5px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+h3 {
+  text-align: center;
+  padding: 5px;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-subtitle {
+  color: #525656;
+  font-style: italic;
+  text-align: center;
+}
+
+.card-text {
+  text-align: center;
+}
+
+#bookDetailsCard{
+  font-size: small;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0px;
+}
+
+.btn-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

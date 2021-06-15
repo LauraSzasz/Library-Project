@@ -10,7 +10,7 @@ import {Router} from "@angular/router";
 })
 export class AddAuthorComponent implements OnInit {
 
-  author: Author = new Author();
+  author!: Author;
 
   constructor(private authorService: AuthorService, private router: Router) {
   }

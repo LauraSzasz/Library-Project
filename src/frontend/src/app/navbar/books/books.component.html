@@ -1,0 +1,39 @@
+<h3>Books</h3>
+
+<div class="container">
+  <div>
+    <button clsss="addBookBtn" id="btnAddBook" class="btn-info" routerLink="/addBook">+</button>
+    <h6 class="addBookBtn">Add book</h6>
+  </div>
+  <br>
+  <div class="card-deck">
+    <div class="row card-group">
+      <div class="col-lg-3 col-md-2 col-sm-1" *ngFor="let book of books">
+        <div class="card mb-4">
+          <img class="card-img-top img-fluid.max-width:100%" src={{book.imageURL}} alt="Card image cap">
+          <div class="card-body">
+            <div><h5 class="card-title">{{book.title}}</h5></div>
+            <div><h6 class="card-subtitle">{{book.author | authorFullName}}</h6></div>
+            <br>
+            <p>
+              <a class="btn btn-info" data-bs-toggle="collapse" href="#bookDetails" role="button"
+                 aria-expanded="false" aria-controls="collapseExample">
+                Book details
+              </a>
+            </p>
+            <div class="collapse" id="bookDetails" >
+              <div class="card card-body" id="bookDetailsCard">
+                <span>Genre: {{book.genre}}</span>
+                <span>ISBN: {{book.isbn}}</span>
+                <span>Number of pages: {{book.pagesNumber}}</span>
+                <span>Publisher: {{book.publisher}}</span>
+                <span>ReleaseDate: {{book.releaseYear}}</span>
+                <span>Book is available: {{book.isAvailable | yesNo}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,8 @@
 package com.library.Book.Library.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -36,10 +39,21 @@ public class Author {
     @OneToMany(mappedBy = "author")
     private List<Book> books;
 
+    @JsonBackReference
+    public List<Book> getBooks() {
+        return books;
+    }
+
     public Author(String firstName, String lastName, Date dateOfBirth, List<Book> books) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
         this.books = books;
+    }
+
+    public Author(String firstName, String lastName, Date dateOfBirth) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
     }
 }

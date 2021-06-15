@@ -5,7 +5,6 @@ import com.library.Book.Library.enums.BookGenre;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,7 +23,7 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 
     List<Book> findAllByPublisher(String publisher);
 
-    List<Book> findAllByReleaseDateAfter(Date releaseDate);
+    List<Book> findAllByReleaseYearGreaterThan(Integer releaseYear);
 
     List<Book> findAllByTitleContaining(String title);
 

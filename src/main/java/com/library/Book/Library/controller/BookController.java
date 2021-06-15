@@ -17,6 +17,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/books")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:4200")
 public class BookController {
 
     private final BookService bookService;
@@ -79,12 +80,12 @@ public class BookController {
     }
 
     @GetMapping("/releaseDate")
-    public ResponseEntity<List<Book>> getBooksByReleaseDateAfter(Date date) {
-        List<Book> bookList = bookService.findAllByReleaseDateAfter(date);
+    public ResponseEntity<List<Book>> getBooksByReleaseYearGreaterThan(Integer releaseYear) {
+        List<Book> bookList = bookService.findAllByReleaseYearGreaterThan(releaseYear);
         if (!bookList.isEmpty()) {
             return ResponseEntity.ok(bookList);
         } else {
-            throw new ResourceNotFoundException("No book released after this date was found");
+            throw new ResourceNotFoundException("No book released after this year was found");
         }
     }
 

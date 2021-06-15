@@ -8,7 +8,6 @@ import com.library.Book.Library.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -46,8 +45,8 @@ public class BookService {
         return bookRepository.findAllByPublisher(publisher);
     }
 
-    public List<Book> findAllByReleaseDateAfter(Date releaseDate) {
-        return bookRepository.findAllByReleaseDateAfter(releaseDate);
+    public List<Book> findAllByReleaseYearGreaterThan(Integer releaseYear) {
+        return bookRepository.findAllByReleaseYearGreaterThan(releaseYear);
     }
 
     public void update(Long id, Book newBook) {
@@ -59,7 +58,7 @@ public class BookService {
             oldBook.setIsbn(newBook.getIsbn());
             oldBook.setPagesNumber(newBook.getPagesNumber());
             oldBook.setNumberOfCopies(newBook.getNumberOfCopies());
-            oldBook.setReleaseDate(newBook.getReleaseDate());
+            oldBook.setReleaseYear(newBook.getReleaseYear());
             oldBook.setPublisher(newBook.getPublisher());
             oldBook.setAvailable(newBook.isAvailable());
             oldBook.setAuthor(newBook.getAuthor());

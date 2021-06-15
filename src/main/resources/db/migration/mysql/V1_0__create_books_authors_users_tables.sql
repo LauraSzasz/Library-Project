@@ -19,9 +19,10 @@ create table if not exists books
     ISBN             VARCHAR(10),
     pages_number     integer,
     number_of_copies integer,
-    release_date     DATE,
+    release_year     integer,
     publisher        VARCHAR(20),
-    is_available     boolean DEFAULT true,
+    is_available     BOOLEAN DEFAULT true,
+    image_URL        varchar(150),
     author_id        integer,
     constraint foreign key (author_id) references authors (author_id)
 
